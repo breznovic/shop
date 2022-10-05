@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 import './MovieList.css'
 import { useParams } from 'react-router-dom'
-import Cards from '../card/card'
+import Card from '../card/Card'
 
 const MovieList = () => {
 
@@ -28,7 +28,7 @@ const MovieList = () => {
             <div className='list__cards'>
                 {
                     movieList.map(movie => (
-                        <Cards movie={movie} />
+                        <Card movie={movie} />
                     ))
                 }
             </div>
