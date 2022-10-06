@@ -3,7 +3,7 @@ import Skeleton, {SkeletonTheme} from 'react-loading-skeleton'
 import './Card.css'
 import {Link} from 'react-router-dom'
 
-const Cards = ({movie}) => {
+const Card = ({movie}) => {
 
     const [isLoading, setIsLoading] = useState(true)
 
