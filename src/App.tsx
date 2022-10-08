@@ -1,23 +1,23 @@
-import React from 'react'
-import './App.css'
+import "./App.css"
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import SinglePage from './components/watch/SinglePage'
 import Header from './components/header/Header'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import HomePage from './pages/Home/Home'
-import Movie from './pages/Movie/Movie'
-import MovieList from './components/movieList/MovieList'
+import Footer from './components/footer/Footer'
+import HomePage from './pages/Home/HomePage'
 
 function App() {
-    return <div className='App'>
-        <Router>
-            <Header/>
-            <Routes>
-                <Route index element={<HomePage/>}></Route>
-                <Route path='movie/:id' element={<Movie/>}></Route>
-                <Route path='movies/:type' element={<MovieList/>}></Route>
-                <Route path='/*' element={<h1>Error Page</h1>}></Route>
-            </Routes>
-        </Router>
-    </div>
+    return (
+        <>
+            <Router>
+                <Header />
+                <Switch>
+                    <Route exact path='/' component={HomePage} />
+                    <Route path='/singlepage/:id' component={SinglePage} exact />
+                </Switch>
+                <Footer />
+            </Router>
+        </>
+    )
 }
 
 export default App
