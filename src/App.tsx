@@ -1,7 +1,5 @@
-import Layout from './components/Layout/Layout'
-
 function App() {
-    return <Layout />
+    return <h1>test</h1>
 }
 
 export default App
