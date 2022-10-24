@@ -16,6 +16,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
         decreaseCartQuantity,
         removeFromCart,
     } = useShoppingCart()
+
     const quantity = getItemQuantity(id)
 
     return (
